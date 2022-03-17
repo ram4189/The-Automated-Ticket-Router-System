@@ -1,0 +1,235 @@
+<html>
+<body>
+    <h3>Consumer complaints ticket router: Multiclass classification</h3>
+	
+	<header class="intro-header" style="background-image: url('images.jpg')">
+	
+  <form action="/predict" method="POST">
+
+    <div>
+    <label for="issue">Issue:</label>
+	<select name="Issues" id="issues">
+		<option value=" Communication tactics "> Communication tactics </option>
+		<option value=" Cont'd attempts collect debt not owed "> Cont'd attempts collect debt not owed </option>
+		<option value=" Using a debit or ATM card "> Using a debit or ATM card </option>
+		<option value=" Other "> Other </option>
+		<option value=" Account opening, closing, or management "> Account opening, closing, or management </option>
+		<option value=" Incorrect information on credit report "> Incorrect information on credit report </option>
+		<option value=" Loan servicing, payments, escrow account "> Loan servicing, payments, escrow account </option>
+		<option value=" Loan modification,collection,foreclosure "> Loan modification,collection,foreclosure </option>
+		<option value=" Deposits and withdrawals "> Deposits and withdrawals </option>
+		<option value=" Settlement process and costs "> Settlement process and costs </option>
+		<option value=" Billing disputes "> Billing disputes </option>
+		<option value=" Identity theft / Fraud / Embezzlement "> Identity theft / Fraud / Embezzlement </option>
+		<option value=" Credit reporting "> Credit reporting </option>
+		<option value=" Problems when you are unable to pay "> Problems when you are unable to pay </option>
+		<option value=" Advertising and marketing "> Advertising and marketing </option>
+		<option value=" Collection practices "> Collection practices </option>
+		<option value=" Improper use of my credit report "> Improper use of my credit report </option>
+		<option value=" Application, originator, mortgage broker "> Application, originator, mortgage broker </option>
+		<option value=" Disclosure verification of debt "> Disclosure verification of debt </option>
+		<option value=" Balance transfer "> Balance transfer </option>
+		<option value=" Can't repay my loan "> Can't repay my loan </option>
+		<option value=" Sale of account "> Sale of account </option>
+		<option value=" Closing/Cancelling account "> Closing/Cancelling account </option>
+		<option value=" Repaying your loan "> Repaying your loan </option>
+		<option value=" Taking/threatening an illegal action "> Taking/threatening an illegal action </option>
+		<option value=" Credit decision / Underwriting "> Credit decision / Underwriting </option>
+		<option value=" Managing the loan or lease "> Managing the loan or lease </option>
+		<option value=" Making/receiving payments, sending money "> Making/receiving payments, sending money </option>
+		<option value=" Unable to get credit report/credit score "> Unable to get credit report/credit score </option>
+		<option value=" Collection debt dispute "> Collection debt dispute </option>
+		<option value=" Payoff process "> Payoff process </option>
+		<option value=" Taking out the loan or lease "> Taking out the loan or lease </option>
+		<option value=" False statements or representation "> False statements or representation </option>
+		<option value=" Credit determination "> Credit determination </option>
+		<option value=" APR or interest rate "> APR or interest rate </option>
+		<option value=" Credit reporting company's investigation "> Credit reporting company's investigation </option>
+		<option value=" Transaction issue "> Transaction issue </option>
+		<option value=" Dealing with my lender or servicer "> Dealing with my lender or servicer </option>
+		<option value=" Problems caused by my funds being low "> Problems caused by my funds being low </option>
+		<option value=" Charged fees or interest I didn't expect "> Charged fees or interest I didn't expect </option>
+		<option value=" Unauthorized transactions/trans. issues "> Unauthorized transactions/trans. issues </option>
+		<option value=" Customer service / Customer relations "> Customer service / Customer relations </option>
+		<option value=" Managing, opening, or closing account "> Managing, opening, or closing account </option>
+		<option value=" Credit line increase/decrease "> Credit line increase/decrease </option>
+		<option value=" Applied for loan/did not receive money "> Applied for loan/did not receive money </option>
+		<option value=" Credit card protection / Debt protection "> Credit card protection / Debt protection </option>
+		<option value=" Late fee "> Late fee </option>
+		<option value=" Other transaction issues "> Other transaction issues </option>
+		<option value=" Unsolicited issuance of credit card "> Unsolicited issuance of credit card </option>
+		<option value=" Billing statement "> Billing statement </option>
+		<option value=" Can't contact lender "> Can't contact lender </option>
+		<option value=" Delinquent account "> Delinquent account </option>
+		<option value=" Improper contact or sharing of info "> Improper contact or sharing of info </option>
+		<option value=" Other fee "> Other fee </option>
+		<option value=" Credit monitoring or identity protection "> Credit monitoring or identity protection </option>
+		<option value=" Rewards "> Rewards </option>
+		<option value=" Shopping for a loan or lease "> Shopping for a loan or lease </option>
+		<option value=" Fraud or scam "> Fraud or scam </option>
+		<option value=" Can't stop charges to bank account "> Can't stop charges to bank account </option>
+		<option value=" Shopping for a line of credit "> Shopping for a line of credit </option>
+		<option value=" Account terms and changes "> Account terms and changes </option>
+		<option value=" Money was not available when promised "> Money was not available when promised </option>
+		<option value=" Payment to acct not credited "> Payment to acct not credited </option>
+		<option value=" Received a loan I didn't apply for "> Received a loan I didn't apply for </option>
+		<option value=" Charged bank acct wrong day or amt "> Charged bank acct wrong day or amt </option>
+		<option value=" Privacy "> Privacy </option>
+		<option value=" Managing the line of credit "> Managing the line of credit </option>
+		<option value=" Other service issues "> Other service issues </option>
+		<option value=" Wrong amount charged or received "> Wrong amount charged or received </option>
+		<option value=" Getting a loan "> Getting a loan </option>
+		<option value=" Incorrect/missing disclosures or info "> Incorrect/missing disclosures or info </option>
+		<option value=" Application processing delay "> Application processing delay </option>
+		<option value=" Arbitration "> Arbitration </option>
+		<option value=" Fees "> Fees </option>
+		<option value=" Bankruptcy "> Bankruptcy </option>
+		<option value=" Cash advance fee "> Cash advance fee </option>
+	
+	</select>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	
+
+	<label for="sub_issue">Sub_issue:</label>
+	<select name="sub_issues" id="sub_issues">
+	
+		<option value="  ">  </option>
+		<option value=" Account status "> Account status </option>
+		<option value=" Repaying your loan "> Repaying your loan </option>
+		<option value=" Attempted to collect wrong amount "> Attempted to collect wrong amount </option>
+		<option value=" Debt was paid "> Debt was paid </option>
+		<option value=" Called outside of 8am-9pm "> Called outside of 8am-9pm </option>
+		<option value=" Used obscene/profane/abusive language "> Used obscene/profane/abusive language </option>
+		<option value=" Reinserted previously deleted info "> Reinserted previously deleted info </option>
+		<option value=" Talked to a third party about my debt "> Talked to a third party about my debt </option>
+		<option value=" Information is not mine "> Information is not mine </option>
+		<option value=" Frequent or repeated calls "> Frequent or repeated calls </option>
+		<option value=" Debt is not mine "> Debt is not mine </option>
+		<option value=" Threatened to sue on too old debt "> Threatened to sue on too old debt </option>
+		<option value=" Not given enough info to verify debt "> Not given enough info to verify debt </option>
+		<option value=" Report improperly shared by CRC "> Report improperly shared by CRC </option>
+		<option value=" Problem with statement of dispute "> Problem with statement of dispute </option>
+		<option value=" Threatened to take legal action "> Threatened to take legal action </option>
+		<option value=" Personal information "> Personal information </option>
+		<option value=" Problems when you are unable to pay "> Problems when you are unable to pay </option>
+		<option value=" Problem with fraud alerts "> Problem with fraud alerts </option>
+		<option value=" Problem getting report or credit score "> Problem getting report or credit score </option>
+		<option value=" Contacted employer after asked not to "> Contacted employer after asked not to </option>
+		<option value=" Sued w/o proper notification of suit "> Sued w/o proper notification of suit </option>
+		<option value=" No notice of investigation status/result "> No notice of investigation status/result </option>
+		<option value=" Public record "> Public record </option>
+		<option value=" Problem getting my free annual report "> Problem getting my free annual report </option>
+		<option value=" Right to dispute notice not received "> Right to dispute notice not received </option>
+		<option value=" Contacted me after I asked not to "> Contacted me after I asked not to </option>
+		<option value=" Seized/Attempted to seize property "> Seized/Attempted to seize property </option>
+		<option value=" Inadequate help over the phone "> Inadequate help over the phone </option>
+		<option value=" Impersonated an attorney or official "> Impersonated an attorney or official </option>
+		<option value=" Threatened arrest/jail if do not pay "> Threatened arrest/jail if do not pay </option>
+		<option value=" Debt was discharged in bankruptcy "> Debt was discharged in bankruptcy </option>
+		<option value=" Not disclosed as an attempt to collect "> Not disclosed as an attempt to collect </option>
+		<option value=" Received marketing offer after opted out "> Received marketing offer after opted out </option>
+		<option value=" Account terms "> Account terms </option>
+		<option value=" Investigation took too long "> Investigation took too long </option>
+		<option value=" Debt resulted from identity theft "> Debt resulted from identity theft </option>
+		<option value=" Billing dispute "> Billing dispute </option>
+		<option value=" Attempted to/Collected exempt funds "> Attempted to/Collected exempt funds </option>
+		<option value=" Report shared with employer w/o consent "> Report shared with employer w/o consent </option>
+		<option value=" Problem cancelling or closing account "> Problem cancelling or closing account </option>
+		<option value=" Account terms and changes "> Account terms and changes </option>
+		<option value=" Called after sent written cease of comm "> Called after sent written cease of comm </option>
+		<option value=" Indicated committed crime not paying "> Indicated committed crime not paying </option>
+		<option value=" Getting a loan "> Getting a loan </option>
+		<option value=" Contacted me instead of my attorney "> Contacted me instead of my attorney </option>
+		<option value=" Charged fees or interest I didn't expect "> Charged fees or interest I didn't expect </option>
+		<option value=" Charged bank acct wrong day or amt "> Charged bank acct wrong day or amt </option>
+		<option value=" Sued where didn't live/sign for debt "> Sued where didn't live/sign for debt </option>
+		<option value=" Applied for loan/did not receive money "> Applied for loan/did not receive money </option>
+		<option value=" Can't contact lender "> Can't contact lender </option>
+		<option value=" Payment to acct not credited "> Payment to acct not credited </option>
+		<option value=" Receiving unwanted marketing/advertising "> Receiving unwanted marketing/advertising </option>
+		<option value=" Can't stop charges to bank account "> Can't stop charges to bank account </option>
+		<option value=" Indicated shouldn't respond to lawsuit "> Indicated shouldn't respond to lawsuit </option>
+		<option value=" Received a loan I didn't apply for "> Received a loan I didn't apply for </option>
+		<option value=" Trouble with how payments are handled "> Trouble with how payments are handled </option>
+		<option value=" Can't decrease my monthly payments "> Can't decrease my monthly payments </option>
+		<option value=" Having problems with customer service "> Having problems with customer service </option>
+		<option value=" Qualify for a better loan than offered "> Qualify for a better loan than offered </option>
+		<option value=" Can't get flexible payment options "> Can't get flexible payment options </option>
+		<option value=" Can't temporarily postpone payments "> Can't temporarily postpone payments </option>
+		<option value=" Keep getting calls about my loan "> Keep getting calls about my loan </option>
+		<option value=" Don't agree with fees charged "> Don't agree with fees charged </option>
+		<option value=" Received bad information about my loan "> Received bad information about my loan </option>
+		<option value=" Need information about my balance/terms "> Need information about my balance/terms </option>
+		<option value=" Can't qualify for a loan "> Can't qualify for a loan </option>
+		<option value=" Insurance terms "> Insurance terms </option>	
+	
+	
+	
+	</select>
+
+	<br>
+	<br>
+	<br>
+	
+
+	<label for="submitted_via">submitted_via:</label>
+	<select name="submitted_via" id="submitted_via">
+		
+		<option value=" Referral "> Referral </option>
+		<option value=" Postal mail "> Postal mail </option>
+		<option value=" Email "> Email </option>
+		<option value=" Web "> Web </option>
+		<option value=" Phone "> Phone </option>
+		<option value=" Fax "> Fax </option>
+
+	</select>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	
+	<label for="tags">tags:</label>
+	<select name="tags" id="tags">
+		
+		<option value="  ">  </option>
+		<option value=" Older American "> Older American </option>
+		<option value=" Servicemember "> Servicemember </option>
+		<option value=" Older American, Servicemember "> Older American, Servicemember </option>
+
+	</select>
+
+	
+	<br>
+	<br>
+	<br>
+
+	<label for="state">state</label>
+	
+    <textarea name="state" rows="1" cols="10"></textarea>>
+    
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	
+	<label for="zipcode">zipcode</label>
+	
+    <textarea name="zipcode" rows="1" cols="10"></textarea>>
+    <br>
+	
+
+
+	<br>
+	<br>
+
+	<label for="consumer_narrative">Consumer narrative</label>
+	
+    <textarea name="consumer_narrative" rows="2" cols="100"></textarea>>
+    <br>
+    <br>
+	
+	
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+</body>
+</html>
+
+
