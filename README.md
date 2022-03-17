@@ -2,7 +2,7 @@
 # The Automated Ticket Router System
 
 We know that amongst all the companies, the routing of tickets raised by both
-internal users and external customers across departments has been a major challenge for years. Over the years, due to rising number of complaints, this has only
+internal users and external customers across departments has been a major challenge for years. Over the years, due to rising number of complaints, this has only
 added to the complexity of matter. This project takes consumer court complaints
 as one of examples to analyze the gravity of such problem and provide the AI
 based solution to expedite the routing of tickets across departments. We aim
